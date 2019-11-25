@@ -26,6 +26,7 @@ class LocationsTableViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         if let handlerId = handlerId {
             DataController.removeUpdateHandler(id: handlerId)
         }

@@ -16,6 +16,26 @@ class AddLocationViewController: UIViewController {
     @IBOutlet weak var locationField: UITextField!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var url: UITextField!
+    
+    var activeField: UITextField?
+    
+    override func getActiveField() -> UITextField? {
+        return activeField
+    }
+    
+    override func setActiveField(_ activeField: UITextField?) {
+        self.activeField = activeField
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeFromKeyboardNotifications()
+    }
 
     @IBAction func onCancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

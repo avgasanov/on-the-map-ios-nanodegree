@@ -22,10 +22,10 @@
 		BD82F8F32388400300B6E9E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD82F8F22388400300B6E9E3 /* MapViewController.swift */; };
 		BD937D2F238A8C9A00F2D5A9 /* PublicUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD937D2E238A8C9A00F2D5A9 /* PublicUserInfo.swift */; };
 		BD9709892385A61A0025C577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9709882385A61A0025C577 /* AppDelegate.swift */; };
-		BD97098D2385A61A0025C577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD97098C2385A61A0025C577 /* ViewController.swift */; };
 		BD9709902385A61A0025C577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD97098E2385A61A0025C577 /* Main.storyboard */; };
 		BD9709922385A61B0025C577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9709912385A61B0025C577 /* Assets.xcassets */; };
 		BD9709952385A61B0025C577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9709932385A61B0025C577 /* LaunchScreen.storyboard */; };
+		BDAAE671238C3624003FE45E /* UIViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAAE670238C3624003FE45E /* UIViewControllerExtention.swift */; };
 		BDB439E523885BCF00F843AF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB439E423885BCF00F843AF /* DataController.swift */; };
 		BDB439E823885FF700F843AF /* GeocodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB439E723885FF700F843AF /* GeocodingViewController.swift */; };
 		BDF8EB2A2388532600A307A0 /* LocationsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF8EB292388532600A307A0 /* LocationsTabBarController.swift */; };
@@ -49,11 +49,11 @@
 		BD937D2E238A8C9A00F2D5A9 /* PublicUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicUserInfo.swift; sourceTree = "<group>"; };
 		BD9709852385A61A0025C577 /* on the map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "on the map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9709882385A61A0025C577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD97098C2385A61A0025C577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD97098F2385A61A0025C577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD9709912385A61B0025C577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD9709942385A61B0025C577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD9709962385A61B0025C577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDAAE670238C3624003FE45E /* UIViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtention.swift; sourceTree = "<group>"; };
 		BDB439E423885BCF00F843AF /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BDB439E723885FF700F843AF /* GeocodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingViewController.swift; sourceTree = "<group>"; };
 		BDF8EB292388532600A307A0 /* LocationsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTabBarController.swift; sourceTree = "<group>"; };
@@ -123,6 +123,7 @@
 				BDF8EB2B2388582400A307A0 /* AddLocationViewController.swift */,
 				BDB439E723885FF700F843AF /* GeocodingViewController.swift */,
 				BD11C3882389AAA100728AEF /* LocationsTableViewController.swift */,
+				BDAAE670238C3624003FE45E /* UIViewControllerExtention.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,7 +151,6 @@
 				BD5F81162386ED7B007492E1 /* Model */,
 				BD97099C2385A9380025C577 /* Assets */,
 				BD9709882385A61A0025C577 /* AppDelegate.swift */,
-				BD97098C2385A61A0025C577 /* ViewController.swift */,
 				BD9709962385A61B0025C577 /* Info.plist */,
 			);
 			path = "on the map";
@@ -240,7 +240,6 @@
 				BD25873F23871C0100C04394 /* StudentInformation.swift in Sources */,
 				BD2587452387277600C04394 /* LocationUpdatedResponse.swift in Sources */,
 				BD25874723872E2D00C04394 /* LogoutResponse.swift in Sources */,
-				BD97098D2385A61A0025C577 /* ViewController.swift in Sources */,
 				BD25874123871FC300C04394 /* StudentsResponse.swift in Sources */,
 				BD9709892385A61A0025C577 /* AppDelegate.swift in Sources */,
 				BDF8EB2A2388532600A307A0 /* LocationsTabBarController.swift in Sources */,
@@ -251,6 +250,7 @@
 				BD5F81212386FDBC007492E1 /* LoginResponse.swift in Sources */,
 				BD2587432387249100C04394 /* LocationCreatedResponse.swift in Sources */,
 				BD25874923872E8600C04394 /* Session.swift in Sources */,
+				BDAAE671238C3624003FE45E /* UIViewControllerExtention.swift in Sources */,
 				BD5F81192386EDB7007492E1 /* UdacityClient.swift in Sources */,
 				BDF8EB2C2388582400A307A0 /* AddLocationViewController.swift in Sources */,
 				BD5F811F2386F744007492E1 /* Error.swift in Sources */,

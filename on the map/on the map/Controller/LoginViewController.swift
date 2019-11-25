@@ -16,6 +16,26 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     
+    var activeField: UITextField?
+    
+    override func getActiveField() -> UITextField? {
+        return activeField
+    }
+    
+    override func setActiveField(_ activeField: UITextField?) {
+        self.activeField = activeField
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeFromKeyboardNotifications()
+    }
+    
     
     @IBAction func onLoginClick(_ sender: UIButton) {
         guard let username = loginField.text, let password = passwordField.text else {
@@ -30,11 +50,7 @@ class LoginViewController: UIViewController {
     }
     
     func updateUI(loading: Bool) {
-        if loading {
-            loadingIndicator.startAnimating()
-        } else {
-            loadingIndicator.stopAnimating()
-        }
+        loading ? loadingIndicator.startAnimating() : loadingIndicator.stopAnimating()
         loginField.isEnabled = !loading
         passwordField.isEnabled = !loading
         loginButton.isEnabled = !loading
